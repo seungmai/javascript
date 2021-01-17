@@ -42,14 +42,14 @@ age = 4;
 console.log(age);
 var ago;
 
-// 3. Contant => (Contants는 한번 할당하면 값이 절대 바뀌지 않는 값 const=lmmutable, 반대되는 값은 let=Mutable) ,read 읽기만 가능하다. 쓰는 것은 x
+// 3. Constant => (Constant는 한번 할당하면 값이 절대 바뀌지 않는 값 const=lmmutable, 반대되는 값은 let=Mutable) ,read 읽기만 가능하다. 쓰는 것은 x
 // use const whenever possible.
 // only use let if variable needs to change.
 const daysInWeek = 7;
 const maxNumber = 5;
 
 // Note!
-// Immutable data types(데이터 자체를 절대 바꾸지 못하는 것!) : premitive types, frozen objects (i.e. object. freeze())
+// Immutable data types(데이터 자체를 절대 바꾸지 못하는 것!): premitive types, frozen objects (i.e. object. freeze())
 // Mutable data type(데이터 자체를 바꿀 수 있는 것!): all objects by default are mutable in JS
 // favor immutable data type always for a few reasons: =>(왠만해서는 값이 변경되는 않는 값을 사용하라는 뜻임.)
 // - security =>(보안이 좋음. 다른해커들이 접근 불가)
