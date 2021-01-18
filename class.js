@@ -47,7 +47,7 @@ class User {
 }
 
 const user1 = new User('Steve', 'Job', -1);  //사람의 나이가 -1이 되는 것이 말안됨!
-console.log(user1.age);            
+console.log(user1.age);
 
 // 3. Fields (public, private) //그냥 추가되었다 정도만 알아 두기.
 // Too soon!
@@ -96,7 +96,7 @@ class Shape { //shape이라는 클래스 안에는 width, height, color 총 세�
   }
 }
 
-class Rectangle extends Shape {} //extends 클래스를 이용해서 shape을 바로 연장할수 있다. 이렇게만 정의해도 우리가 shape에서 정의한 필드와 method가 자동적으로 Rectangle에 포함이 된다. extends Shape 연장한다는 키워드만 이용하게 되면 Shape에 있는 모든 것들이 Rectangle에 포함된다.
+class Rectangle extends Shape { } //extends 클래스를 이용해서 shape을 바로 연장할수 있다. 이렇게만 정의해도 우리가 shape에서 정의한 필드와 method가 자동적으로 Rectangle에 포함이 된다. extends Shape 연장한다는 키워드만 이용하게 되면 Shape에 있는 모든 것들이 Rectangle에 포함된다.
 class Triangle extends Shape {
   draw() {
     super.draw();       //공통적으로 정의한 draw도 그려주면서 조금 더 색다롭게 그려주고싶다면 super(부모에 들어오라는 함수를 호출)을 이용!
