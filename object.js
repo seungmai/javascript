@@ -19,19 +19,19 @@ print(ellie); //간편하게 데이터를 관리할 수가 있다.
 
 // with JavaScript magic (dynamically typed language(자바스크립트는 동적으로 타입이 runtime일 때 결정되는 언어이다.))
 // can add properties later(뒤늦게 하나의 properties를 추가 할 수 있다. 단 유지보수가 힘들기 때문에 많이 쓰지는 말고 가능하다 정도만 알아두기!)
-ellie.hasJob = true;
-console.log(ellie.hasJob); 
+ellie.hasJob = true; //properties추가
+console.log(ellie.hasJob); //true출력
 
 // can delete properties later(하나의 properties를 삭제도 할수 있다.)
-delete ellie.hasJob;
-console.log(ellie.hasJob);
+delete ellie.hasJob; //properties삭제
+console.log(ellie.hasJob);//undefined 출력
 
 // 2. Computed properties(계산된 properties라고 한다.)
 // key should be always string // 주의할 점 properties는 string type으로 해야된다. 
 console.log(ellie.name); // 우리가 오브젝트 안에있는 데이터에 접근할 때는 닷(.)을 이용해서 데이터를 접근했다. 그리고 코딩하는 그 순간 우리가 정말 그 키에 해당하는 값을 받아오고 싶을 때 (.)을 써서 코딩한다. 보통은 .을 사용하는 게 맞음.
 console.log(ellie['name']); //다른 방법은 []괄호를 이용해서 name이라는 string 즉, 오브젝트 안에있는 변수의 이름을 string형태로 접근이 가능하다. 그리고 [] 이것을 사용할 때는 우리가 정확하게 어떤 키가 필요한지 모를 때, 즉 런타임에서 결정될 때 []쓰게된다. 우리가 실시간으로 원하는 키의 값을 받아오고 싶다면 []을 쓴다. 
 ellie['hasJob'] = true; //ellie라는 object에 true라고 할당하게되면 'true'로 나온다.
-console.log(ellie.hasJob);
+console.log(ellie.hasJob); //true값 출력
 
 function printValue(obj, key) { //오브젝트와 키를 받음
   console.log(obj[key]);        //키 출력 나중에 동적으로 키에 관련된 value를 받아 와야 될 때 유용하게 쓸수있다.
@@ -68,7 +68,7 @@ for (let key in ellie) {//그래서 모든 키를 받아와서 일들을 처리�
 }
 
 // for (value of iterable) //for of는 오브젝트를 쓰는 것이 아니라 배열과 같은 배열리스트 iterable한 아이들을 사용한다.
-const array = [1, 2, 4, 5]; //순치작으로 데이터가 담겨져있다.
+const array = [1, 2, 4, 5]; //순차적으로 데이터가 담겨져있다.
 for (let value of array) { //이 데이터의 모든 값들을 찍으로려면 for of를 사용하면 된다. array에 있는 모든 값들이 value에 할당되면서 block안에서 순차적으로 출력하거나 값을 이렇게 개선할 수가 있다.
   console.log(value);
 }
