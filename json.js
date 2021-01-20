@@ -39,7 +39,7 @@ json = JSON.stringify(rabbit, (key, value) => {
 console.log(json);
 
 // 2. JSON to Object (제이슨을 오브젝트로 변환하는 방법)
-// parse(json)(우리가 만들어진 제이슨을 어떻게 다시 오브젝트로 만들수 있는지)
+// )parse(json(우리가 만들어진 제이슨을 어떻게 다시 오브젝트로 만들수 있는지)
 console.clear();
 json = JSON.stringify(rabbit);
 console.log(json);
