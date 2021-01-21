@@ -14,7 +14,7 @@ setTimeout(() => console.log('2'), 1000); //setTimeout 이라는 웹 api가 있�
 console.log('3'); //console.log '3'출력
 
 // Synchronous callback(즉각적으로 동기적으로 실행하는 Synchronous callback이다.)
-function printImmediately(print) {
+function printImmediately(print) { //printImmediately라는 함수 만듬.
   print();
 }
 printImmediately(() => console.log('hello'));
@@ -30,7 +30,7 @@ class UserStorage { // UserStorage class를 만듬.
   loginUser(id, password, onSuccess, onError) { // 아이디 , 비밀번호, 로그인성공, 로그인실패)
     setTimeout(() => {
       if (
-        (id === 'ellie' && password === 'dream') ||
+        (id === 'ellie' && password === 'dream')
         (id === 'coder' && password === 'academy')
       ) {
         onSuccess(id);
@@ -76,3 +76,4 @@ userStorage.loginUser(
     console.log(error);
   }
 );
+//콜백지옥 가독성이 매우 떨어짐. 읽기가 어려움
