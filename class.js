@@ -6,7 +6,7 @@
 //  - introduced in ES6
 //  - syntactical sugar over prototype-based inheritance9(편리함을 제공함.)
 
-// 1. Class declarations
+// 1. Class declarations(클래스 선언과 오브젝트 생성)
 class Person { //사람이라는 클래스를 만듬
   // constructor
   constructor(name, age) { //생성자를 이용
@@ -28,21 +28,24 @@ ellie.speak();
 
 // 2. Getter and setters //방어적인 자세로 만들수 있게 도와주는 것
 class User {
-  constructor(firstName, lastName, age) {
+  //생성자 필드
+  constructor(firstName, lastName, age) { //User라는 class에는 3개의 feild가 존재
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age; // this.age Getter호출, = age; setters호출
   }
 
+  //getter
   get age() { //-1이 말이 안되기 때문에 get이라는 키워드를 이용해 값을 리턴할 수 있다.
     return this._age; //사용자가 get age를 호출하게 되면 우리는 바로 this.age를 리턴해야된다.
   }
 
+  //setter
   set age(value) { //set이라는 키워드를 이용해 값을 설정할 수 있다. 대신에 set은 값을 설정하기 때문에 value를 받아와야된다.
     // if (value < 0) {
-    //   throw Error('age can not be negative');
+    //   throw Error('age can not be negative'(-1은 안된다.));
     // }
-    this._age = value < 0 ? 0 : value; //새로운 value를 받으면 우리가 this.age를 value로 설정하게 된다.
+    this._age = value < 0 ? 0 : value; //새로운 value를 받으면 우리가 this.age를 value로 설정하게 된다.(생성자 팔드명 앞에 _를 붙이는게 관습)
   }
 }
 
@@ -63,7 +66,7 @@ console.log(experiment.privateField);
 // 4. Static properties and methods //이런 것이 있다는 정도만!
 // Too soon!
 class Article {
-  static publisher = 'Dream Coding'; //클래스가 가지고 있는 고유한 값과 이런 데이터의 상관없이 동일하게 반복적으로 사용되어지는 method가 있을 수 있는데 그런 것들을 static이라는 키워드를 이용해서 붙이면 오브젝트에 상관없이 클래스 자체에 연결되어 있다.
+  static publisher = 'Dream Coding'; //클래스가 가지고 있는 고유한 값과 이런 데이터의 상관없이 동일하게 반복적으로 사용되어지는 method가 있을 수 있는데 그런 것들을 static이라는 키워드를 이용해서 붙이면 오브젝트에 상관없이 클래스 자체에 연결되어 있다. static은 object마다 할당되는게 아니라 class자체에 붙어있다.
   constructor(articleNumber) {
     this.articleNumber = articleNumber;
   }
@@ -78,8 +81,8 @@ const article2 = new Article(2);
 console.log(Article.publisher);
 Article.printPublisher(); //static함수를 호출할 때도 클래스 이름을 이용해서 프린트퍼블리셔라고 호출하면 드림코딩을 호출할 수 있다.
 
-// 5. Inheritance (상속과 다양성)
-// a way for one class to extend another class.
+// 5. Inheritance, Polymorphism(상속과 다형성)
+// a way for one class to extend another class.(공통되어지는 값들을 extends 키워드로 재사용할 수 있다. 또한 부모 클래스에 있는 모든 것들이 자식 클래스에 포함이 된다. 부모 클래스의 값을 변경하면 상속 받은 자식클래스의 값들도 자동으로 변경된다.)
 class Shape { //shape이라는 클래스 안에는 width, height, color 총 세가지가 있다.
   constructor(width, height, color) {
     this.width = width;

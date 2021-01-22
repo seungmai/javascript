@@ -1,12 +1,12 @@
 // Function
 // - fundamental building block in the program
-// - subprogram can be used multiple times (여러번 재사용이 가능하다.)
+// - subprogram can be used multiple times (여러번 재사용이 가능하다 또한 프로그램은 여러개의 function들로 구성되어 있는 function하나 하나를 sub-program이라고도 부른다. 함수는 입력 -> 연산 -> 출력의 과정이다.)
 // - performs a task or calculates a value // 작업을 수행하거나 값을 계산한다.
 
-// 1. Function declaration
+// 1. Function declaration(함수선언)
 // function name(param1, param2) { body... return; }
-// one function === one thing
-// naming: doSomething, command, verb 동사형태로 지정해야된다.
+// one function === one thing(하나의 function에는 하나의 기능만)
+// naming: doSomething, command, verb 명령어, 동사형태로 지정해야된다.
 // e.g. createCardAndPoint -> createCard, createPoint
 // function is object in JS (function은 object이다.)
 function printHello() { //fuction과 함수 이름
@@ -20,9 +20,9 @@ function printHello() { //fuction과 함수 이름
   log('Hello@'); // log함수를 이용해서 원하는 정보를 입력할 수 있다.
   log(1234); // 숫자도 입력할 수 있다.
   
-  // 2. Parameters
-  // premitive parameters: passed by value(value가 전달된다.)
-  // object parameters: passed by reference(reference가 전달 된다.)
+  // 2. Parameters(매개 변수)
+  // premitive parameters: passed by value(value가 전달된다. 즉 값으로 전달)
+  // object parameters: passed by reference(reference가 전달 된다. 즉 참조로 전달)
   function changeName(obj) {  // ellie의 이름이 coder로 바뀐다.
     obj.name = 'coder';
   }
@@ -63,6 +63,7 @@ function printHello() { //fuction과 함수 이름
     // console.log(childMessage); //error
   }
   printMessage();
+//위와 같이 중첩된 함수에서, 자식의 함수가 부모함수에 정의된 변수에 접급이 가능한 것들을 클로저라고 한다.
   
   // 6. Return a value
   function sum(a, b) {
@@ -71,7 +72,7 @@ function printHello() { //fuction과 함수 이름
   const result = sum(1, 2); // 3
   console.log(`sum: ${sum(1, 2)}`);
   
-  // 7. Early return, early exit
+  // 7. Early return(조기 리턴), early exit(조기 종료)
   // bad
   function upgradeUser(user) { //{}블럭 안에서 로직을 작성하면 가독성이 떨어진다.
     if (user.point > 10) {
@@ -79,7 +80,7 @@ function printHello() { //fuction과 함수 이름
     }
   }
   
-  // good
+  // good(function 내부에서 조건이 틀릴때, 리턴(종료)하게 코드를 짜는것이 가독성에 좋음.)
   function upgradeUser(user) {
     if (user.point <= 10) { //조건이 맞지않을 때는 빨리 return을 해서 함수를 종료하고 조건이 맞을 때만 필요한 logic들을 실행하는 것이 좋은 것이다.
       return;
@@ -93,7 +94,7 @@ function printHello() { //fuction과 함수 이름
   // can be passed as an argument to other functions.(인수로 다른 함수에 전달할 수 있다.)
   // can be returned by another function(다른 기능으로 반환할 수 있다.)
   
-  // 1. Function expression(위에 것을 가능하게 한것이 Function expression이다.)
+  // 1. Function expression(함수표현), (위에 것을 가능하게 한것이 Function expression이다.)
   // a function declaration can be called earlier than it is defiend. (hoisted)(함수 선언은 정의되기 전에 호출될 수 있다.)
   // a function expression is created when the execution reaches it.(함수 식은 실행이 도달할 때 생성된다.)
   const print = function () {
@@ -128,7 +129,7 @@ function printHello() { //fuction과 함수 이름
   randomQuiz('wrong', printYes, printNo);
   randomQuiz('love you', printYes, printNo);
   
-  // Arrow function (함수를 간결하게 만들어 주는 것, 이름이없는 function ) 
+  // Arrow(화살표) function (함수를 간결하게 만들어 주는 것, 이름이없는 function, 함수형 프로그래밍인 배열/리스트에 빛을 발휘 한다. ) 
   // always anonymous
   const simplePrint = function () {
   console.log('simplePrint!');
@@ -137,7 +138,7 @@ function printHello() { //fuction과 함수 이름
   //const simplePrint = () => console.log('simplePrint!');
   //const add = (a, b) => a + b;
   //const simpleMultiply = (a, b) => {
-    // do something more
+  // do something more
   //  return a * b;
   //};
   

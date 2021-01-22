@@ -20,7 +20,7 @@ async function fetchUser() { //async를 쓰게되면 자동적으로 promise로 
   async function getApple() {
     await delay(2000); //2초가 지나면 resolve가 호출이 된다.
     //await라는 키워드를 쓰게되면 이 딜레이가 끝날 때까지 기다려 준다.
-    return '🍎';
+    return '🍎'; // 사과를 리턴하게 된다.
   }
   
   async function getBanana() {
@@ -38,7 +38,7 @@ async function fetchUser() { //async를 쓰게되면 자동적으로 promise로 
   
   pickFruits().then(console.log);
   
-  // 3. useful APIs ✨
+  // 3. useful APIs ✨ // 유용한 APIs가 있다.
   function pickAllFruits() {
     return Promise.all([getApple(), getBanana()]).then(fruits =>
       fruits.join(' + ')

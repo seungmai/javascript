@@ -6,10 +6,10 @@
 const arr1 = new Array(); //첫번째, new를 적어서 선언하는 방법
 const arr2 = [1, 2]; // 두번째, []안에 적어서 선언하는 방법
 
-// 2. Index position
+// 2. Index position(인덱스 위치)
 const fruits = ["🍎", "🍌"]; //두개의 문자열의 데이터가 있고 사과와 바나나가 있다.
 console.log(fruits); //fruits 출력
-console.log(fruits.length);
+console.log(fruits.length);// > 2
 console.log(fruits[0]); //사과 값출력, 배열은 숫자 인덱스를 전달하게되면 그 인덱스에 해당하는 value들을 받을 수가 있다.
 console.log(fruits[1]); // 바나나 값출력
 console.log(fruits[2]); //없는 것을 출력하면 undefined
@@ -65,7 +65,7 @@ const fruits2 = ["🍐", "🥥"];
 const newFruits = fruits.concat(fruits2); //기존에 있던 fruits와 우리가 만든 fruits2를 묶어서 나타낼 수 있다.
 console.log(newFruits);
 
-// 5. Searching
+// 5. Searching(검색)
 // indexOf: find the index(우리가 배열안에 어떤값이 몇번째 인덱스에 있는지 알고 싶을 때 유용하게 사용할 수 있다. indexOf를 사용하면 된다.)
 console.clear();
 console.log(fruits);

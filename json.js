@@ -2,6 +2,11 @@
 
 // JSON
 // JavaScript Object Notation
+// HTTP(HyperText Transfer Protocol), 하이퍼텍스 전송 프로토콜, 하이퍼텍스트는 웹사이트에서 이용되어지는 Rink들만 얘기하는 것이 아니라 모든 리소스(문서, 이미지 파일 등)를 포함한다. 브라우저 위에서 동작하고 있는 웹사이트나 웹 APP같은 Client들이 어떻게 Server와 통신할 수 있는지를 정의 한것을 HTTP라 한다. HTTP를 이용해서 Server에서 Date를 요청해서 받아올 수 있는 방법으로 AJAX라는 것이 있다.
+
+//AJAX(Asynchronous Javascript And XML), 비동기 Javascript, XML이다. 웹페이지에서 동적으로 Server에게 Date를 주고 받을 수 있는 기술을 의미한다. 대표적인 브라우저 API로는 XMLHttpRequest, fetch가 존재한다. AJAX로 Data를 주고 받을 때의 포맷으로 JSON을 많이 사용한다.
+
+//JSON(JavaScript Object Notation), Javascript 객채 표기법이다. 가장 간단한 데이터 교환방식이다. 가벼운 텍스트 기반 구조이다. 읽기가 쉽다. key-value의 쌍으로 이루어져 있다. 네트워크 연결 간 데이터 직렬화 및 전송에 사용한다. 독립적인 프로그래밍 언어 및 플랫폼(= 프로그래밍 언어나 플랫폼에 상관없이 쓸수가 있다.). 거의 모든 언어가 JSON -> Object(해당 언어의 문법에 맞춰서..), Object -> JSON으로 변환하는 것을 지원한다.
 
 // 1. Object to JSON (오브젝트를 제이슨으로 변환하는 방법)
 // stringfy(obj)(우리가 stringify을 어떻게 사용할 수 있는지)

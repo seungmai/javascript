@@ -1,8 +1,8 @@
 'use strict';
 // Objects
-// one of the JavaScript's data types.
-// a collection of related data and/or functionality.
-// Nearly all objects in JavaScript are instances of Object
+// one of the JavaScript's data types.(JS의 데이터 타입 중 하나)
+// a collection of related data and/or functionality.(관련 데이터/ 함수 집합체)
+// Nearly all objects in JavaScript are instances of Object(JS의 거의 모든 객체는 오브젝트의 인스턴스이다.)
 // object = { key : value }; (오브젝트는 key와 value의 집합체이다. 우리가 접근할 수 있는 properties와 그 properties가 가지고 있는 값 두가지로 나누어 진다.)
 //1. Literals and properties
 const obj1 = {}; // ' {};이것을 object literal' syntax부른다. //오브젝트를 만드는 방법(1), {} << 퀄리 브라켓을 이용하여 오브젝트를 만들 수가 있다.
@@ -19,7 +19,7 @@ print(ellie); //간편하게 데이터를 관리할 수가 있다.
 
 // with JavaScript magic (dynamically typed language(자바스크립트는 동적으로 타입이 runtime일 때 결정되는 언어이다.))
 // can add properties later(뒤늦게 하나의 properties를 추가 할 수 있다. 단 유지보수가 힘들기 때문에 많이 쓰지는 말고 가능하다 정도만 알아두기!)
-ellie.hasJob = true; //properties추가
+ellie.hasJob = true; //properties(성질)추가
 console.log(ellie.hasJob); //true출력
 
 // can delete properties later(하나의 properties를 삭제도 할수 있다.)
@@ -39,7 +39,7 @@ function printValue(obj, key) { //오브젝트와 키를 받음
 printValue(ellie, 'name'); //키는 항상 string type으로 전달해야됨
 printValue(ellie, 'age');  //키는 항상 string type으로 전달해야됨
 
-// 3. Property value shorthand
+// 3. Property value shorthand(단축 속성명)
 const person1 = { name: 'bob', age: 2 };//person1 오브젝트 생성
 const person2 = { name: 'steve', age: 3 };//person2 오브젝트 생성
 const person3 = { name: 'dave', age: 4 };//person3 오브젝트 생성
@@ -73,7 +73,7 @@ for (let value of array) { //이 데이터의 모든 값들을 찍으로려면 f
   console.log(value);
 }
 
-// 7. Fun cloning
+// 7. Fun cloning(복제)
 // Object.assign(dest, [obj1, obj2, obj3...])
 const user = { name: 'ellie', age: '20' }; //user라는 곳에 오브젝트를 만듬.
 const user2 = user; //user2가 user을 가르킨다.
@@ -87,7 +87,7 @@ for (let key in user) {
 console.clear(); //이전에 사용되었던 log는 지움.
 console.log(user3); //user3값 출력
 
-const user4 = Object.assign({}, user);//target을 만들면 텅텅 비어져 있는 것을 정리한 다음에 //오브젝트는 자바스트립트에 있는 기본적으로 탑재되어 있는 오브젝트 중에 하나이다. 그리고 자바스크립트에 있는 모든 오브젝트는 이 오브젝트를 상속한다. assign은 복사하고자 하는 target과 복사를 하려고하는 그 소스를 같이 전달해줘야되고 T값은 target과 복사하는 것이 통합된 아이가 리턴되는 것을 확인할 수가있다.
+const user4 = Object.assign({}, user);//오브젝트는 자바스트립트에 있는 기본적으로 탑재되어 있는 오브젝트 중에 하나이다. 그리고 자바스크립트에 있는 모든 오브젝트는 이 오브젝트를 상속한다. assign은 복사하고자 하는 target과 복사를 하려고하는 그 소스를 같이 전달해줘야되고 T값은 target과 복사하는 것이 통합된 아이가 리턴되는 것을 확인할 수가있다.
 console.log(user4); //console.log로 user4출력
 
 // another example

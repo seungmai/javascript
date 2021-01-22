@@ -2,7 +2,7 @@
 console.log('my' + ' cat'); //문자열과 문자열을 합쳐서 새로운 문자열을 만들수 있다.
 console.log('1' + 2); //문자열에 숫자를 더하게 되면 숫자가 문자열로 변환되어서 나타난다.
 console.log(`string literals: 1 + 2 = ${1 + 2}`); //백틱기호를 활용해서 string literals를 만들 수 있다. $달러 값을 이용하면 변수값을 계산해서 string을 포함해서 문자열을 만들게 된다.
-
+ 
 // 2. Numeric operators(숫자를 연산하는 것)
 console.log(1 + 1); // add
 console.log(1 - 1); // substract
@@ -11,7 +11,7 @@ console.log(1 * 1); // multiply
 console.log(1 % 1); // remainder 나누고 나머지 값
 console.log(1 ** 1); // exponentiation 2에 3승 값
 
-// 3. Increment and decrement operators(카운터라는 변수가 있으면 값을 할당해주는 것이다.)
+// 3. Increment(증가) and decrement(감소) operators(카운터라는 변수가 있으면 값을 할당해주는 것이다.)
 let counter = 2;
 const preIncrement = ++counter;//++기호를 써주면 preIncrement라고 한다.
 // counter = counter + 1; (위에 코드랑 동일한 코드)
@@ -26,7 +26,7 @@ console.log(`preDecrement: ${preIncrement}, counter: ${counter}`);
 const postDecrement = counter--;
 console.log(`preDecrement: ${postIncrement}, counter: ${counter}`);
 
-// 4. Assignment operators(연산할 때 +-, -+ 등으로 사용됨. 앞으로 많이 생략해서 쓰게 된다.)
+// 4. Assignment(할당) operators(연산할 때 +-, -+ 등으로 사용됨. 앞으로 많이 생략해서 쓰게 된다.)
 let x = 3;
 let y = 6;
 x += y; // x = x + y; (반복되는 x는 생략)
@@ -34,13 +34,13 @@ x -= y;
 x *= y;
 x /= y;
 
-// 5. Comparison operators (비교하는 조작자)
-console.log(10 < 6); // less than
-console.log(10 <= 6); // less than or equal
-console.log(10 > 6); // greater than
-console.log(10 >= 6); // greater than or equal
+// 5. Comparison(비교) operators (비교하는 조작자)
+console.log(10 < 6); // less than(false)
+console.log(10 <= 6); // less than or equal(false)
+console.log(10 > 6); // greater than(true)
+console.log(10 >= 6); // greater than or equal(true)
 
-// 6. Logical operators: || (or), && (and), ! (not) =>세 가지의 연사자가 있다.
+// 6. Logical(논리적) operators: || (or), && (and), ! (not) =>세 가지의 연사자가 있다.(논리연산을 할 때는, 연산량이 많은 함수를 뒤 쪽에 배치시키는게 효율적이다.)
 const value1 = false;
 const value2 = 4 < 2; // fales
 
@@ -70,15 +70,15 @@ console.log(!value1);
 console.log(!value2);
 console.log(!check);
 
-// 7. Equality
+// 7. Equality(평등)
 const stringFive = '5';
 const numberFive = 5;
 
-// == loose equality, with type conversion (두개의 ==(이꼴)을 사용하면 loose equality라고 한다.)
+// == loose(느슨한) equality, with type conversion (두개의 ==(이꼴)을 사용하면 loose equality라고 한다.)
 console.log(stringFive == numberFive); //문자열이든 숫자든 똑같다고 판단.
 console.log(stringFive != numberFive); //문자열이든 숫자든 똑같지 않다고 판단.
 
-// === strict equality, no type conversion (type이 다르면 다른 애들이라고 판단.)
+// === strict(엄격한) equality, no type conversion (type이 다르면 다른 애들이라고 판단.)
 console.log(stringFive === numberFive); //"야 너네는 다른 타입이잖아!"문자열이든 숫자든 똑같이 않다고 판단.
 console.log(stringFive !== numberFive); //문자열이든 숫자든 똑같다고 판단.
 
@@ -98,7 +98,7 @@ console.log('' === false); // 불리언 다른 타입이기 때문에 false
 console.log(null == undefined); // 같은 타입이기 때문에 true
 console.log(null === undefined); // 다른 타입이기 때문에 false
 
-// 8. Conditional operators: if
+// 8. Conditional(조건부) operators: if
 // if, else if, else
 const name = 'coder';
 if (name === 'ellie') {
@@ -109,13 +109,13 @@ if (name === 'ellie') {
     console.log('unkwnon');
 }
 
-// 9. Ternary operator: ?
+// 9. Ternary(삼항) operator: ?
 // condition ? value : value2;
 console.log(name === 'ellie' ? 'yes' : 'no'); //ellie가 true면 퀘션마크 옆에 있는 것을 실행하고 아니면 : 옆에 있는 것을 실행한다.
 
-// 10. Switcj statement
-// use for multiple if checks
-// use for enum-like value check
+// 10. Switch statement(스위치 문)
+// use for multiple if checks(여러 if 검사에 사용)
+// use for enum-like value check(열거 형 값(enum-like value)확인 사용)
 // use for multiple type checks in TS
 const browser = 'IE';
 switch (browser) { // swich 안에 있는 browser의 값

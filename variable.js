@@ -9,7 +9,7 @@
 
 'use strict'; // => JavaScript 사용할 때는 맨처음에 선언을 해두고 하는 게 좋다. 시용하는 이유는 자바스크립트 엔진이 조금 더 효율적으로 더 빠르게 자바스크립트를 분석할 수 있기 때문이다.
 
-// 2. Variable => (변수:변경될 수 있는 값이라고 한다.) , rw(read/write)Variable은 메모리에 읽고 쓰는 것이 가능하다 
+// 2. Variable => (변수:변경될 수 있는 값이라고 한다.) , rw(read/write)Variable은 메모리에 읽고 쓰는 것이 가능하다   
 // let (added in ES6) =>(let은 ES6에 추가된 언어이다. 또한 JavaScript에서 변수를 선언할 수 있는 것은 let이다.)
 let globalName = "global name"; //=>(Global scope라고 하는데 어느 곳에서나 내용을 볼 수 있다.)
 
@@ -117,13 +117,13 @@ console.log(symbol1 === symbol2); // => fales (동일한 Symbol을 만들어도 
 const gSymbol1 = Symbol.for('id'); //동일한 심볼을 만들고 싶다면 Symbol을 g, for을 사용하면된다.
 const gSymbol2 = Symbol.for('id');
 console.log(gSymbol1 === gSymbol2); // => true (동일한 Symbol을 만듬)
-console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`); //Symbol을 바로 출력하개 되면 에러가 발생하게 되는데 항상 description을 이용해서 스프레이어로 변환해서 출력을 해야된다.
+console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`); //Symbol을 바로 출력하게 되면 에러가 발생하게 되는데 항상 description을 이용해서 스프레이어로 변환해서 출력을 해야된다.
 
 //object(물건 물체를 대표하는 박스형태), real-life object, data structure
 const seungmin = {name: 'seungmin', age: 20}; //const는 변수를 바꿀 수없지만 그안에 있는 name or age는 값이 변경이 가능하다.
 seungmin.age = 21;
 
-// 5. Dynamic typing: dynamically typed language
+// 5. Dynamic typing: dynamically typed language 
 let text = 'hello';
 console.log(text.charAt(0));//h 프로그래밍 언어에서 인덱싱은 배열을 쓸 때는 항상 0부터 시작된다.
 console.log(`value: ${text}, type: ${typeof text}`);
@@ -135,3 +135,4 @@ console.log(`value: ${text}, type: ${typeof text}`);
 text = '8' / '2';
 console.log(`value: ${text}, type: ${typeof text}`);
 console.log(text.charAt(0)); // => (오류뜸)
+//JS는 ㄴ런타임에서 타입이 정해지는데, 이 때 error가 참 많이 발생, 그래서 나온게 TypeScript!
