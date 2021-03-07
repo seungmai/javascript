@@ -3,22 +3,22 @@
 // added in Es 5
 // use this for Valina JavaScript
 
-//async vs defer
-//async: 브라우저에 스크립트 파일이 비동기적으로 실행될 수 있음을 나타내기 위해 사용된다.
-//defer: HTML 구문 분석이 완전히 완료되면 스크립트 파일을 실행하도록 브라우저에 지시한다.
+// async vs defer
+// async: 브라우저에 스크립트 파일이 비동기적으로 실행될 수 있음을 나타내기 위해 사용된다.
+// defer: HTML 구문 분석이 완전히 완료되면 스크립트 파일을 실행하도록 브라우저에 지시한다.
 
 'use strict'; // => JavaScript 사용할 때는 맨처음에 선언을 해두고 하는 게 좋다. 시용하는 이유는 자바스크립트 엔진이 조금 더 효율적으로 더 빠르게 자바스크립트를 분석할 수 있기 때문이다.
 
-// 2. Variable => (변수:변경될 수 있는 값이라고 한다.) , rw(read/write)Variable은 메모리에 읽고 쓰는 것이 가능하다   
-// let (added in ES6) =>(let은 ES6에 추가된 언어이다. 또한 JavaScript에서 변수를 선언할 수 있는 것은 let이다.)
-let globalName = "global name"; //=>(Global scope라고 하는데 어느 곳에서나 내용을 볼 수 있다.)
+// 2. Variable => (변수:변경될 수 있는 값이라고 한다.) , rw(read/write)Variable은 메모리에 읽고 쓰는 것이 가능하다.  
+// let (added in ES6) =>(let은 ES6에 추가된 언어이다. 또한 JavaScript에서 변수를 선언할 수 있는 것은 let이다.).
+let globalName = "global name"; // =>(Global scope라고 하는데 어느 곳에서나 내용을 볼 수 있다.).
 
 let name = 'seungmin' // => (name이라는 변수에 "승민"값을 할당한 것.)
 console.log(name);
-name = 'hello'; // =>(name이라는 변수에 "hello"값을 할당한 것.)
+name = 'hello'; // => (name이라는 변수에 "hello"값을 할당한 것.)
 console.log(name);
 
-{ //=> ("{}" Block scope라고 하는데 밖에서 더이상 블럭 안에있는 내용은 보지 못한다.)
+{ // => ("{}" Block scope라고 하는데 밖에서 더이상 블럭 안에있는 내용은 보지 못한다.)
 let name = 'seungmin' // => (name이라는 변수에 "승민"값을 할당한 것.)
 console.log(name);
 name = 'hello'; // =>(name이라는 변수에 "hello"값을 할당한 것.)
@@ -69,7 +69,7 @@ const size = 17.1; // decimal number(소수점에 숫자)
 console.log(`value: ${count}, type: ${typeof count}`);
 console.log(`value: ${size}, type: ${typeof size}`);
 
-// number - speicla numeric values: infinity, -infinity, NaN
+// number - speiclal numeric values: infinity, -infinity, NaN
 const infinity = 1 / 0; //숫자를 0으로 나누면 무한대의 숫자값이 생기는 것을 볼수가 있는데 이것을 Infinity라고 한다.
 const negativeInfinity = -1 / 0; // -(마이너스)네거티브 벨류를 0으로 나누면 -가된다.
 const nAn = 'not a number' / 2; //(숫자가 아닌 스트링을 숫자로 나누게되면 nan값이 출력이 된다.)
