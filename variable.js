@@ -1,4 +1,5 @@
 // play 놀이 적응해 가는 중!!!
+// 월요일부터 복습!!!
 // 1. Use strict
 // added in Es 5
 // use this for Valina JavaScript
