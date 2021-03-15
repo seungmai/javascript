@@ -4,12 +4,12 @@ console.log('1' + 2); //문자열에 숫자를 더하게 되면 숫자가 문자
 console.log(`string literals: 1 + 2 = ${1 + 2}`); //백틱기호를 활용해서 string literals를 만들 수 있다. $달러 값을 이용하면 변수값을 계산해서 string을 포함해서 문자열을 만들게 된다.
  
 // 2. Numeric operators(숫자를 연산하는 것)
-console.log(1 + 1); // add
-console.log(1 - 1); // substract
-console.log(1 / 1); // divide
-console.log(1 * 1); // multiply
-console.log(1 % 1); // remainder 나누고 나머지 값
-console.log(1 ** 1); // exponentiation 2에 3승 값
+console.log(1 + 1); // add(더하기)
+console.log(1 - 1); // substract(빼기)
+console.log(1 / 1); // divide(나누기)
+console.log(1 * 1); // multiply(곱하기)
+console.log(1 % 1); // remainder (나누고 나머지 값)
+console.log(1 ** 1); // exponentiation (2에 3승 값)
 
 // 3. Increment(증가) and decrement(감소) operators(카운터라는 변수가 있으면 값을 할당해주는 것이다.)
 let counter = 2;
