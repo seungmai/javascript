@@ -34,7 +34,7 @@ const fetchNumber = new Promise((resolve, reject) => {
 
 fetchNumber
   .then(num => num * 2) //then 값은 바로 전달 할 수 있다.
-  .then(num => num * 3)
+  .then(num => num * 3) //then 값은 바로 전달 할 수 있다.
   .then(num => {
     return new Promise((resolve, reject) => { //이제는 새로운 Promise를 리턴할 것이다.
       setTimeout(() => resolve(num - 1), 1000);
