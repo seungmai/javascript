@@ -96,3 +96,5 @@ const students = [
     .join();
   console.log(a);
 }
+
+// 위에 나열된 문제들 다시 풀기!
