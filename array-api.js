@@ -97,4 +97,4 @@ const students = [
   console.log(a);
 }
 
-// 위에 나열된 문제들 다시 풀기!
+// 위에 나열된 문제들 다시 풀기!, JavaScript 복습 및 이해 101강의 듣기
