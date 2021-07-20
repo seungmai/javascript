@@ -15,6 +15,7 @@ console.log(fruits[1]); // 바나나 값출력
 console.log(fruits[2]); //없는 것을 출력하면 undefined
 console.log(fruits[fruits.length - 1]); //배열에 제일 마지막에 있는 아이템을 찾을 때는 우리가 배열레 length에 -1을 해서 마지막 데이터를 접근 할 수 가있다. 배열은 0부터 시작하기 때문에 총길이의 -1을 붙이면 제일 마지막 인덱스를 받아올 수 있다.
 console.clear();
+
 // 3. Looping over an array(전체적인 데이터 안에서 돌면서 출력하는 것)
 // print all fruits (과일 안에있는 모든 과일들을 출력을 하라.)
 // a. for (for을 이용해서)

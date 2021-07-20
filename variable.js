@@ -12,7 +12,7 @@
 
 // 2. Variable => (변수:변경될 수 있는 값이라고 한다.) , rw(read/write)Variable은 메모리에 읽고 쓰는 것이 가능하다.  
 // let (added in ES6) =>(let은 ES6에 추가된 언어이다. 또한 JavaScript에서 변수를 선언할 수 있는 것은 let이다.).
-let globalName = "global name"; // =>(Global scope라고 하는데 어느 곳에서나 내용을 볼 수 있다.).
+let globalName = "global name"; // =>(Global scope라고 하는데 어느 곳에서나 내용을 볼 수 있다.). 
 
 let name = 'seungmin' // => (name이라는 변수에 "승민"값을 할당한 것.)
 console.log(name);
@@ -97,7 +97,7 @@ console.log('value: ' + helloBob + ' type: ' + typeof helloBob); // 굳이 +를 
 // true: any other value 등이 있다.
 const canRead = true;
 const test = 3 < 1; // false
-console.log(`value: ${canRead}, type: ${typeof canRead}`);
+console.log(`value: ${canRead}, type: ${typeof canRead}`); 
 console.log(`value: ${test}, type: ${typeof test}`);
 
 // null => (텅텅 비어있어, 너는 아무것도 아닌 값이라는 것을 지정해주는 것)
@@ -136,4 +136,4 @@ console.log(`value: ${text}, type: ${typeof text}`);
 text = '8' / '2';
 console.log(`value: ${text}, type: ${typeof text}`);
 console.log(text.charAt(0)); // => (오류뜸)
-//JS는 ㄴ런타임에서 타입이 정해지는데, 이 때 error가 참 많이 발생, 그래서 나온게 TypeScript!
+//JS는 런타임에서 타입이 정해지는데, 이 때 error가 참 많이 발생, 그래서 나온게 TypeScript!
